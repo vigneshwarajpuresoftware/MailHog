@@ -12,3 +12,4 @@ before_install:
  - docker buildx inspect --bootstrap
  - docker buildx build -t ajv21/sample:mailhogx64ARM --platform linux/amd64,linux/arm64 --push .
  - docker buildx rm buildname
+ 
