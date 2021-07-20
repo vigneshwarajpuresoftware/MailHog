@@ -1,4 +1,7 @@
-language: go
-go:
- - 1.6
- - tip
+script:
+ - docker login --username=ajv21 -p=Jun21@2021
+ - docker buildx create --name buildname
+ - docker buildx use buildname
+ - docker buildx inspect --bootstrap
+ - docker buildx build -t ajv21/sample:mailhogx64ARM --platform linux/amd64,linux/arm64 --push .
+ - docker buildx rm buildname
