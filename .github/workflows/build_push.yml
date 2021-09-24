@@ -25,4 +25,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ajv21/mailHog:latest
+            ajv21/mailhog:latest
